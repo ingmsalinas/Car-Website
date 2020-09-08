@@ -140,8 +140,6 @@ public class CarControllerTest {
         mvc.perform(
                 delete("/cars/{id}", car.getId())
                         .content(json.write(car).getJson())
-                        //.contentType(MediaType.APPLICATION_JSON_UTF8)
-                        //.accept(MediaType.APPLICATION_JSON_UTF8)
                         )
                 .andExpect(status().isMethodNotAllowed());
 
